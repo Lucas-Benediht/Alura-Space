@@ -16,26 +16,26 @@ Antes de iniciar o projeto, certifique-se de ter o seguinte instalado em seu amb
 ## Instalação
 
 1.Clonar o repositório
-`https://github.com/Lucas-Benediht/Space-Galery.git`
-`cd space-gallery`
+```https://github.com/Lucas-Benediht/Space-Galery.git```
+```cd space-gallery```
 
 2.Criar uma maquina virtual
-`python -m venv venv`
+```python -m venv venv```
 
 2.1Ative a maquina virtual
-`source venv/bin/activate`
+```source venv/bin/activate```
 
 3.Instale as dependências:
-`pip install -r requirements.txt`
+```pip install -r requirements.txt```
 
 4.Execute as migrações do banco de dados:
-`python manage.py migrate`
+```python manage.py migrate```
 
 5.Crie um superusuário (administrador) para gerenciar o site:
-`python manage.py createsuperuser`
+```python manage.py createsuperuser```
 
 6.Inicie o servidor :
-`python manage.py runserver`
+```python manage.py runserver```
 
 Acesse o site em http://localhost:8000/ e faça login com as credenciais do superusuário.
 
