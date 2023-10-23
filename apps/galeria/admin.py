@@ -1,5 +1,5 @@
 from django.contrib import admin
-from galeria.models import Fotografia
+from apps.galeria.models import Fotografia
 
 
 class ListandoFotografias(admin.ModelAdmin):
@@ -7,7 +7,7 @@ class ListandoFotografias(admin.ModelAdmin):
     list_display_links = ("id","nome")
     #Precisa ser uma tupla
     search_fields = ("nome",)
-    list_filter = ("categoria",)
+    list_filter = ("categoria", "usuario",)
     #checkbox
     list_editable = ("publicada",)
     list_per_page = 5
