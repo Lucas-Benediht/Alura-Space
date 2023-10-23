@@ -13,7 +13,7 @@ Antes de iniciar o projeto, certifique-se de ter o seguinte instalado em seu amb
 - Banco de dados SQL (por padrão, o projeto utiliza SQLite)
 
 
-##Instalação
+## Instalação
 
 1.Clonar o repositório
 `https://github.com/Lucas-Benediht/Space-Galery.git`
