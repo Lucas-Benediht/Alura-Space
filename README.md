@@ -15,14 +15,14 @@ Antes de iniciar o projeto, certifique-se de ter o seguinte instalado em seu amb
 
 ## Instalação
 
-1.Clonar o repositório
+1.Clonar o repositório:
 ```https://github.com/Lucas-Benediht/Space-Galery.git```
 ```cd space-gallery```
 
-2.Criar uma maquina virtual
+2.Criar uma maquina virtual:
 ```python -m venv venv```
 
-2.1Ative a maquina virtual
+2.1Ative a maquina virtual:
 ```source venv/bin/activate```
 
 3.Instale as dependências:
