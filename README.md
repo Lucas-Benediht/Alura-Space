@@ -1,4 +1,4 @@
-# Space-Galery ![nova](https://github.com/Lucas-Benediht/Space-Galery/assets/110697669/0c89524a-2357-4866-909c-46080330093c)
+![nova](https://github.com/Lucas-Benediht/Space-Galery/assets/110697669/0c89524a-2357-4866-909c-46080330093c) # Space-Galery 
  
 
 O Space Gallery é um projeto desenvolvido em Django que permite aos usuários visualizar e compartilhar fotos relacionadas ao espaço. Os principais recursos incluem o cadastro de novos usuários, login, a capacidade de adicionar novas fotos e descrições, além de funcionalidades de gerenciamento de fotos por pefil de administradores.
