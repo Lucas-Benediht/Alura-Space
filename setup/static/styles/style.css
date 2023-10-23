@@ -33,11 +33,21 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(
+        #000000,   /* Preto */
+        #100C26,   /* Roxo escuro */
+        #401E67,   /* Roxo */
+        #621E80,   /* Roxo mais claro */
+        #8E2E9A,   /* Roxo esverdeado */
+        #AA8EA6,   /* Roxo mais claro */
+        #AA5E8A    /* Roxo escuro */
+    );
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    color: #FFFFFF;        /* Cor do texto para contraste */
 }
+
 ol, ul {
     list-style: none;
 }
@@ -146,6 +156,7 @@ table {
 
 .card__imagem {
     width: 450px;
+    height: 250px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -333,7 +344,7 @@ table {
 }
 
 .rodape {
-    background-color: #04244F;
+    /* background-color: #621E80; */
     width: 100%;
     padding: 1.5rem 3rem;
     box-sizing: border-box;
