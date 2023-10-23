@@ -1,4 +1,4 @@
-# Space-Galery ![novalogo](https://github.com/Lucas-Benediht/Space-Galery/assets/110697669/f2ae2d0f-b487-4b80-86f1-abea5fc6e854)
+# Space-Gallery ![novalogo](https://github.com/Lucas-Benediht/Space-Galery/assets/110697669/f2ae2d0f-b487-4b80-86f1-abea5fc6e854)
   
  
 
