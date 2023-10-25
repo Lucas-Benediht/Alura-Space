@@ -19,12 +19,18 @@ def imagem(request, foto_id):
     return render(request, 'galeria/imagem.html', {"fotografia": fotografia})
 
 def buscar(request):
-    if not request.user.is_authenticated:
-        messages.error(request, "Usuário não logado")
-        return redirect('login')
-    
     fotografias = Fotografia.objects.order_by("data_fotografia").filter(publicada=True)
-    #Filtrar os itens para buscar
+
+    if "buscar" in request.GET:
+        nome_a_buscar = request.GET['buscar']
+        if nome_a_buscar:
+            fotografias = fotografias.filter(nome__icontains=nome_a_buscar)
+    if "categoria" in request.GET:
+        categoria = request.GET['categoria']
+        if categoria:
+            fotografias = fotografias.filter(categoria__icontains=categoria)
+
+    return render(request, "galeria/buscar.html", {"cards": fotografias})
     
     if "buscar" in request.GET:
         nome_a_buscar = request.GET['buscar']
@@ -32,7 +38,7 @@ def buscar(request):
             fotografias = fotografias.filter(nome__icontains=nome_a_buscar) #Verifica se o objeto que estamos buscando é parecido com oque vamos pesquisar
             
             
-    return render(request, "galeria/buscar.html",{"cards":fotografias})
+    return render(request, "galeria/index.html",{"cards":fotografias})
 
 
 def nova_imagem(request):
@@ -50,8 +56,21 @@ def nova_imagem(request):
          
     return render(request, 'galeria/nova_imagem.html', {'form': form})
 
-def editar_imagem(request):
-    pass
+def editar_imagem(request, foto_id):
+    fotografia = Fotografia.objects.get(id=foto_id) #Puxando no banco de dados o ID
+    form = FotografiaForms(instance=fotografia)
+    
+    if request.method == 'POST':
+        form = FotografiaForms(request.POST, request.FILES, instance=fotografia)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Fotografia Editada com Sucesso")
+            return redirect('index')
+        
+    return render(request, 'galeria/editar_imagem.html', {'form': form, 'foto_id': foto_id})
 
-def deletar_imagem(request):
-    pass
+def deletar_imagem(request, foto_id):
+    fotografia = Fotografia.objects.get(id=foto_id)
+    fotografia.delete()
+    messages.success(request,'O item foi deletado com sucesso!')
+    return redirect('index')
